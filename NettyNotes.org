@@ -1,0 +1,11 @@
+* Core components
+** Channel
+- a vehicle for incoming and outgoing data
+- Every Channel has an associated ChannelPipeline, which holds a chain of ChannelHandler instances.
+** Callbacks
+** Futures
+- ChannelFuture
+- Each of Netty’s outbound I/O operations returns a ChannelFuture; that is, none of them block. 
+** Events and Handlers
+- ChannelHandler
+- EventLoop is aasigned to each Channel
