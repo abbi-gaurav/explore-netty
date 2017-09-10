@@ -1,11 +1,24 @@
 * Core components
-** Channel
+* Channel
+- *Socket*
 - a vehicle for incoming and outgoing data
 - Every Channel has an associated ChannelPipeline, which holds a chain of ChannelHandler instances.
-** Callbacks
-** Futures
-- ChannelFuture
+- it is associated with a single eventloop for its lifetime
+* ChannelFuture
+- Asynchronous notification
 - Each of Netty’s outbound I/O operations returns a ChannelFuture; that is, none of them block. 
-** Events and Handlers
-- ChannelHandler
-- EventLoop is aasigned to each Channel
+* EventLoop
+- Control Flow
+- Multithreading
+- Concurrency
+- one eventloop is bound to a single thread
+* Events and Handlers
+- ChannelHandler  : handle various events
+  - default handler implementations in the form of *adapter* classes,
+- ChannelPipeline : container for a chain of event handlers
+  - Ordered arrangement of ChannelHandlers
+* Transports
+** OIO
+** NIO
+** Local transport
+** Embedded transport
