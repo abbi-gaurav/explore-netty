@@ -22,3 +22,8 @@
 ** NIO
 ** Local transport
 ** Embedded transport
+* ByteBuf
+| Heap buffers     |                                      |
+| Direct buffer    | not in heap                          |
+| Composite buffer | aggregated view of multiple ByteBufs |
+|                  |                                      |
