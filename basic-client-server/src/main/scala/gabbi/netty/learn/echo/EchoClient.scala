@@ -1,4 +1,4 @@
-package gabbi.netty.learn.basic
+package gabbi.netty.learn.echo
 
 import java.net.InetSocketAddress
 

@@ -1,4 +1,4 @@
-package gabbi.netty.learn.basic
+package gabbi.netty.learn.echo
 
 import io.netty.buffer.{ByteBuf, Unpooled}
 import io.netty.channel.ChannelHandler.Sharable
