@@ -26,6 +26,7 @@
 * Features
 ** Zero-copy
 * ByteBuf
-| Heap      |   |
-| Direct    |   |
-| Composite |   |
+| Heap buffers     |                                      |
+| Direct buffer    | not in heap                          |
+| Composite buffer | aggregated view of multiple ByteBufs |
+|                  |                                      |
