@@ -55,5 +55,5 @@ object TelnetClient extends App {
 case class State(channelFutureOpt: Option[ChannelFuture], isBye: Boolean)
 
 object State {
-  val initial = State(None, false)
+  val initial = State(channelFutureOpt = None, isBye = false)
 }

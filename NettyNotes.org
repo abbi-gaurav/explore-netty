@@ -11,7 +11,21 @@
 - Control Flow
 - Multithreading
 - Concurrency
+- Events and tasks are executed are executed in FIFO order.
+- Scheduling tasks
+- Threading model
 - one eventloop is bound to a single thread
+- Netty 4
+  - All IO ops and events are handled by the thread that is assigned to the event loop
+** Task execution
+#+BEGIN_SRC java 
+  while (!terminated) {
+      List <Runnable> readyEvents = blockUntilReady();
+      for (Runnable r : readyEvents){
+          r.run();
+      }
+  }
+#+END_SRC
 * Events and Handlers
 - ChannelHandler  : handle various events
   - default handler implementations in the form of *adapter* classes,

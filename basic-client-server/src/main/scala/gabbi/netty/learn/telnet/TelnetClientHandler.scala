@@ -7,7 +7,7 @@ class TelnetClientHandler extends SimpleChannelInboundHandler[String] {
     println(msg)
   }
 
-  override def exceptionCaught(ctx: ChannelHandlerContext, cause: Throwable) = {
+  override def exceptionCaught(ctx: ChannelHandlerContext, cause: Throwable): Unit = {
     cause.printStackTrace()
     ctx.close()
   }

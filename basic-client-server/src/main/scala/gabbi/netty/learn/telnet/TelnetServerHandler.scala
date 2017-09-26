@@ -15,7 +15,7 @@ class TelnetServerHandler extends SimpleChannelInboundHandler[String] {
   }
 
   override def channelRead0(ctx: ChannelHandlerContext, msg: String): Unit = {
-    val response = Response(msg)
+    val response: Response = Response(msg)
 
     val channelFuture: ChannelFuture = ctx.write(response.string)
 
